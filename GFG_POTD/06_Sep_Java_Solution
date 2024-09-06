@@ -1,0 +1,20 @@
+/*---GFG POTD---- */
+/*--JAVA_SOLUTION--- */
+/*---Kadane's Algorithm---- */
+/*--06-09-2024---- */
+
+class Solution {
+
+    // arr: input array
+    // Function to find the sum of contiguous subarray with maximum sum.
+    long maxSubarraySum(int[] a) {
+       // Your code here
+         long max_Sum = a[0];
+         int curr_Sum  = a[0];
+         for(int i =1; i<a.length; i++){
+             curr_Sum = Math.max(a[i], curr_Sum + a[i]);
+             max_Sum = Math.max(curr_Sum, max_Sum);
+    }
+    return max_Sum;
+}
+}
