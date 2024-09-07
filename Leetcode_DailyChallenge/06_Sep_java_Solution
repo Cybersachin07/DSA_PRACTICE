@@ -2,6 +2,10 @@
 /*----JAVA_SOLUTION---- */
 /*-----LEETCODE_3217. Delete Nodes From Linked List Present in Array---- */
 /*---06-09-2024--- */
+/*----EASY----- */
+
+
+
 class Solution {
     public ListNode modifiedList(int[] nums, ListNode head) {
        Set<Integer> badValues = new HashSet<>();
