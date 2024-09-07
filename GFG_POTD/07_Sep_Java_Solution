@@ -1,0 +1,27 @@
+/*-----GFG-----
+ * -------POTD----
+ * ---07_09_2024----
+ * ----JAVA SOLUTION---
+ * ----MEDIUM----
+ */
+
+
+
+
+
+class Solution {
+    long findNth(long n) {
+        // code here
+        
+        long res = 0;
+        long multi = 1;
+        while(n>0){
+            long rem = n%9;
+            res +=  multi*rem;
+            n = n/9;
+            multi = multi*10;
+        }
+        return  res;
+    }
+}
+ 
