@@ -1,0 +1,19 @@
+/*---LEETCODE---DAILY CHALLENGE---
+--------11-09-2024----
+-----LEETCODE 2220----
+-----ESAY----
+---https://leetcode.com/problems/minimum-bit-flips-to-convert-number/solutions/----
+
+----JAVA SOLUTION-------
+*/
+
+
+
+
+
+
+class Solution {
+    public int minBitFlips(int start, int goal) {
+       return Integer.bitCount(start ^ goal); 
+    }
+}
