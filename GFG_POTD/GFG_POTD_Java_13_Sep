@@ -1,0 +1,35 @@
+/*----GFG----
+------POTD----
+----13-09-2024----
+------JAVA_SOLUTION---
+-------EASY----
+------Mirror Tree----
+---
+*/
+
+
+
+
+
+
+
+
+
+
+class Solution {
+    // Function to convert a binary tree into its mirror tree.
+   Node mirror(Node node) {
+        // Your code here
+        
+        if(node == null){
+            return node;
+        }
+        Node left = mirror(node.left);
+        Node right = mirror(node.right);
+        
+        node.right = left;
+        node.left = right;
+        
+        return node;
+    }
+}
