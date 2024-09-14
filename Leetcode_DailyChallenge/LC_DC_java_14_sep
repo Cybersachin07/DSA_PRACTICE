@@ -1,0 +1,34 @@
+/*---LEETCODE---DAILY CHALLENGE---
+--------14-09-2024----
+-----LEETCODE 2419----
+-----MEDIUM----
+---https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and/description/----
+
+----JAVA SOLUTION-------
+*/
+
+
+
+
+
+class Solution {
+    public int longestSubarray(int[] nums) {
+      int maxVal = 0;
+      int result = 0;
+      int streak = 0;
+       for(int num : nums){
+        if(num > maxVal){
+            maxVal = num;
+            result = 0;
+            streak = 0;
+        }
+        if(maxVal == num){
+            streak++;
+        }else{
+            streak =  0;
+        }
+        result = Math.max(result, streak);
+       }  
+       return result;
+    }
+}
