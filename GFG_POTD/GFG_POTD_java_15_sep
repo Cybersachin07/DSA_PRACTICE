@@ -1,0 +1,47 @@
+/*----GFG----
+------POTD----
+----15-09-2024----
+------JAVA_SOLUTION---
+-------HARD----
+----CONVERT TO DLL-----
+
+---
+*/
+
+
+
+
+
+
+
+
+
+class Solution
+{
+    
+     Node head, prev;
+    Node bToDLL(Node root)
+    {
+        if(root==null) return null;
+        
+       bToDLL(root.left);
+	 
+	 if(prev==null){
+	     head=root;
+	    prev=root; 
+	 //    prev=root;
+	 }
+	 else
+	 {
+	     prev.right=root;
+	     root.left=prev;
+	    	prev=root;
+	 }
+
+	bToDLL(root.right);
+	
+     return head;
+    
+    }
+    
+}
