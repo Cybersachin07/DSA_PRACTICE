@@ -1,0 +1,36 @@
+/*---LEETCODE---DAILY CHALLENGE---
+--------20-09-2024----
+-----LEETCODE 214----
+-----Hard----
+-------
+
+----JAVA SOLUTION-------
+*/
+
+class Solution {
+    private int kmp(String s) {
+        int n = s.length();
+        int i = 0;
+        int[] longPal = new int[n + 1];
+        for (int j = 1; j < n; j++) {
+            while (i > 0 && s.charAt(i) != s.charAt(j)) {
+                i = longPal[i - 1];
+            }
+            if (s.charAt(i) == s.charAt(j)) {
+                i++;
+            }
+            longPal[j] = i;
+        }
+        return longPal[n - 1];
+    }
+
+    public String shortestPalindrome(String s) {
+        String r = new StringBuilder(s).reverse().toString();
+        String temp = s + "#" + r;
+        int len = kmp(temp);
+        String newS = new StringBuilder(s.substring(len)).reverse().toString();
+        return newS + s;
+     
+
+    }
+}

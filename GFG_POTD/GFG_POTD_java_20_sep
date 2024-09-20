@@ -1,0 +1,25 @@
+/*----GFG----
+------POTD----
+----20-09-2024----
+------JAVA_SOLUTION---
+-------Easy----
+----Facing The Sun-----
+
+---
+*/
+
+class Solution {
+    // Returns count buildings that can see sunlight
+    public int countBuildings(int[] height) {
+        // code here
+        
+        int ans = 1, mx = height[0];
+        for(int x:height){
+            if(mx<x){
+                mx=x;
+                ans++;
+            }
+        }
+        return ans;
+    }
+}
