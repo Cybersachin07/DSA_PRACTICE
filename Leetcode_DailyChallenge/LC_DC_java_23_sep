@@ -1,0 +1,32 @@
+/*---LEETCODE---DAILY CHALLENGE---
+--------23-09-2024----
+-----LEETCODE 2707----
+-----medium----
+-------
+
+----JAVA SOLUTION-------
+*/
+
+
+import java.util.*;
+
+class Solution {
+
+    public int minExtraChar(String s, String[] dict) {
+        int n = s.length();
+        Set<String> st = new HashSet<>(Arrays.asList(dict)); 
+        int[] t = new int[n + 1]; 
+        for (int i = n - 1; i >= 0; i--) {
+            t[i] = 1 + t[i + 1]; 
+
+            for (int j = i; j < n; j++) {
+                String curr = s.substring(i, j + 1);
+                if (st.contains(curr)) {
+                    t[i] = Math.min(t[i], t[j + 1]);
+                }
+            }
+        }
+
+        return t[0];
+    }
+}
