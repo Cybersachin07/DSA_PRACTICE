@@ -1,0 +1,33 @@
+/*----GFG----
+------POTD----
+----26-09-2024----
+------JAVA_SOLUTION---
+-------Easy----
+----Roof TOp-----
+
+---
+*/
+
+
+
+class Solution {
+    // Function to find maximum number of consecutive steps
+    // to gain an increase in altitude with each step.
+    public int maxStep(int arr[]) {
+        // Your code here
+        
+        int ans = 0, maxi = 0;
+        for(int  i= 1; i<arr.length; i++){
+            if(arr[i]>arr[i-1])maxi++;
+        
+        else{
+            ans=Math.max(ans,maxi);
+            maxi = 0;
+            
+        }
+        
+   }
+     ans=Math.max(ans,maxi);
+     return ans;
+}
+}
