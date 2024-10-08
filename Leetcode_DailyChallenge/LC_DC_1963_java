@@ -1,0 +1,28 @@
+/*---LEETCODE---DAILY CHALLENGE---
+--------08-10-2024----
+-----LEETCODE 1963----
+-----Medium----
+-------https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/description/
+              ?envType=daily-question&envId=2024-10-08---
+
+----JAVA SOLUTION-------
+*/
+
+
+class Solution {
+    public int minSwaps(String s) {
+        int size = 0;
+
+       
+        for (char ch : s.toCharArray()) {
+            if (ch == '[') {
+                size++;
+            } else if (size != 0) {
+                size--; 
+            }
+        }
+
+        
+        return (size + 1) / 2;
+    }
+}
