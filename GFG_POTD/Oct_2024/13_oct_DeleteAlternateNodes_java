@@ -1,0 +1,20 @@
+/*----GFG----
+------POTD----
+----13-10-2024----
+------java_SOLUTION---
+-------easy----
+----Delete Alternate Nodes-----
+----https://www.geeksforgeeks.org/problems/delete-alternate-nodes/1--
+
+---
+*/
+
+class Solution {
+    public void deleteAlt(Node head) {
+        // Code Here
+        while(head!=null && head.next!=null){
+            head.next = head.next.next;
+            head=head.next;
+        }
+    }
+}
