@@ -1,0 +1,18 @@
+/*----GFG----
+------POTD----
+----18-10-2024----
+------java_SOLUTION---
+-------Easy----
+----Single Number----
+----https://www.geeksforgeeks.org/problems/single-number1014/1-----
+
+*/
+
+class Solution {
+    int getSingle(int arr[]) {
+        // code here
+        int ans = 0;
+        for(int x:arr)ans^=x;
+        return ans;
+    }
+}
