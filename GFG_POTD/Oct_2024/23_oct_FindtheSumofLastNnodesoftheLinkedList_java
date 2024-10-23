@@ -1,0 +1,45 @@
+/*----GFG----
+------POTD----
+----23-10-2024----
+------java_SOLUTION---
+-------Easy----
+----Find the Sum of Last N nodes of the Linked List---
+----https://www.geeksforgeeks.org/problems/find-the-sum-of-last-n-nodes-of-the-linked-list/1-----
+
+*/
+
+/*
+Node class is as follows:
+
+class Node {
+    int data;
+    Node next;
+
+    public Node (int data){
+        this.data = data;
+        this.next = null;
+    }
+}
+*/
+
+class Solution {
+
+    // Return the sum of last k nodes
+     public int sumOfLastN_Nodes(Node head, int n) {
+        // write code here
+        Node temp = head;
+        int count=0,sum=0;
+        while(temp!=null){
+            count++;
+            temp=temp.next;
+        }
+        count-=n;
+        temp=head;
+        while(temp!=null){
+            if(count==0)sum+=temp.data;
+            else count--;
+            temp=temp.next;
+        }
+        return sum;
+    }
+}
