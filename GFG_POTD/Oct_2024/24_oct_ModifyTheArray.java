@@ -12,30 +12,26 @@
 
 class Solution {
     static ArrayList<Integer> modifyAndRearrangeArr(int arr[]) {
-        
         // Complete the function
-     ArrayList<Integer> al = new ArrayList<>();
         int n = arr.length;
-        int zero = 0;
-        
-        for(int i=0; i<n-1; i++)
-        {
-            if(arr[i]!=0 && arr[i]==arr[i+1])
-            {
-                al.add(arr[i]*2);
-                arr[i+1] = 0;
-            }
-            else
-            {
-                if(arr[i]==0) zero++;
-                else al.add(arr[i]);
+        for(int i=0;i<n-1;i++){
+            if(arr[i]==arr[i+1] && arr[i]!=0){
+                arr[i]*=2;
+                arr[i+1]=0;
+                i++;
             }
         }
-        al.add(arr[n-1]);
-        for(int i=0; i<zero; i++)
-        {
-            al.add(al.size(), 0);
+        int i=0;
+        for(int j=0;j<n;j++){
+            if(arr[j]!=0){
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                i++;
+            }
         }
-        return al;
+        ArrayList<Integer> ans = new ArrayList<>();
+        for(int x:arr)ans.add(x);
+        return ans;
     }
 }
