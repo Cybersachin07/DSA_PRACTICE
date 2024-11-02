@@ -1,7 +1,7 @@
 /*----GFG----
 ------POTD----
 ----02-11-2024----
-------java_SOLUTION---
+------cpp_SOLUTION---
 -------Easy----
 --Kth Distance-----
 ----https://www.geeksforgeeks.org/problems/kth-distance3757/1----
