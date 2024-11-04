@@ -1,7 +1,7 @@
 /*----GFG----
 ------POTD----
 ----03-11-2024----
-------cpp_SOLUTION---
+------java_SOLUTION---
 -------Easy----
 --Is Linked LIst Length Even-----
 ----https://www.geeksforgeeks.org/problems/linked-list-length-even-or-odd/1----
