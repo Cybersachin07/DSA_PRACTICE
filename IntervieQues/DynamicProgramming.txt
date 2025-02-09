@@ -1,0 +1,34 @@
+
+Here’s a list of top dynamic programming (DP) problems 
+frequently asked in coding interviews, 
+categorized by difficulty:
+
+📗 𝗘𝗮𝘀𝘆 𝗟𝗲𝘃𝗲𝗹
+
+1. Find the nth Fibonacci number.
+2. Count ways to climb n stairs, taking 1 or 2 steps at a time.
+3. Maximize the amount of money you can rob without robbing adjacent houses.
+4. Find the contiguous subarray with the maximum sum.
+5. Find the minimum cost to reach the top of the stairs.
+
+📘 𝗠𝗲𝗱𝗶𝘂𝗺 𝗟𝗲𝘃𝗲𝗹
+
+1. Find the longest palindromic substring in a given string.
+2. Find the fewest number of coins needed to make up a given amount.
+3. Find the length of the longest increasing subsequence.
+4. Determine if an array can be partitioned into two subsets with equal sum.
+5. Count unique paths in an m x n grid from top-left to bottom-right.
+
+📙 𝗛𝗮𝗿𝗱 𝗟𝗲𝘃𝗲𝗹
+
+1. Find the minimum number of operations to convert one string to another.
+2. Maximize coins by bursting balloons in an optimal order.
+ Interval DP.
+3 Minimize cuts needed to partition a string into palindromic substrings.
+4. Determine if a string can be segmented into dictionary words.
+4. Implement regex matching with support for '.' and '*'.
+5. Pattern matching with '*' (matches any sequence) and '?' (matches a single character).
+6. Schedule jobs to maximize profit without overlapping.
+7. Find the longest subsequence common to two sequences.
+8. Maximize cherries collected in a grid with complex movement rules.
+9. Determine the minimum number of refueling stops to reach the destination.
